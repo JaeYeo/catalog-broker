@@ -1,0 +1,105 @@
+
+ingress:
+  enabled: true
+  hosts:
+    - host: cloudvmbroker.saas.sysmasterk8s.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+configuration: |-
+  cloudvmservicebroker:
+    data_path: \workspace\data
+    beat_ip: 112.175.114.177
+    beat_port: 31584
+    openstack_instances:
+    - service_id: 31c75396-58d0-11ed-9b6a-0242ac120000
+      plan_id: 31c75396-58d0-11ed-9b6a-0242ac120001
+      plan_name: "ubuntu20.04-medium"
+      flavor_id: "25003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "4483c90d-c81c-4934-80bf-836bc4f641b1"
+    - service_id: 31c75396-58d0-11ed-9b6a-0242ac120000
+      plan_id: 31c75396-58d0-11ed-9b6a-0242ac120002
+      plan_name: "ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "4483c90d-c81c-4934-80bf-836bc4f641b1"
+    - service_id: c962dd7e-de77-11ed-b5ea-0242ac120000
+      plan_id: c962dd7e-de77-11ed-b5ea-0242ac120001
+      plan_name: "centos8-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "bbebcfe2-ec0d-43ee-b41b-e14f4e8967e3"
+    - service_id: c962dd7e-de77-11ed-b5ea-0242ac120000
+      plan_id: c962dd7e-de77-11ed-b5ea-0242ac120002
+      plan_name: "centos8-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "bbebcfe2-ec0d-43ee-b41b-e14f4e8967e3"
+    - service_id: 55e94476-9d38-11ed-a8fc-0242ac120000
+      plan_id: 55e94476-9d38-11ed-a8fc-0242ac120001
+      plan_name: "apache-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "d0dbc1cc-37db-49aa-8042-a0effeb8a394"
+    - service_id: 55e94476-9d38-11ed-a8fc-0242ac120000
+      plan_id: 55e94476-9d38-11ed-a8fc-0242ac120002
+      plan_name: "apache-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "d0dbc1cc-37db-49aa-8042-a0effeb8a394"
+    - service_id: 3438eb42-9d42-11ed-a8fc-0242ac120000
+      plan_id: 3438eb42-9d42-11ed-a8fc-0242ac120001
+      plan_name: "nginx-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "59d48c84-8e1b-43d5-be59-4037bbde2e16"
+    - service_id: 3438eb42-9d42-11ed-a8fc-0242ac120000
+      plan_id: 3438eb42-9d42-11ed-a8fc-0242ac120002
+      plan_name: "nginx-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "59d48c84-8e1b-43d5-be59-4037bbde2e16"
+    - service_id: c5a92f2a-9d46-11ed-a8fc-0242ac120000
+      plan_id: c5a92f2a-9d46-11ed-a8fc-0242ac120001
+      plan_name: "tomcat-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "402f5f29-c163-473a-8228-e12c3d47b020"
+    - service_id: c5a92f2a-9d46-11ed-a8fc-0242ac120000
+      plan_id: c5a92f2a-9d46-11ed-a8fc-0242ac120002
+      plan_name: "tomcat-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "402f5f29-c163-473a-8228-e12c3d47b020"
+    - service_id: f5c8e470-9d46-11ed-a8fc-0242ac120000
+      plan_id: f5c8e470-9d46-11ed-a8fc-0242ac120001
+      plan_name: "wildfly-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "32b3b8e0-96de-41fb-ab55-c7dbb6d8bd75"
+    - service_id: f5c8e470-9d46-11ed-a8fc-0242ac120000
+      plan_id: f5c8e470-9d46-11ed-a8fc-0242ac120002
+      plan_name: "wildfly-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "32b3b8e0-96de-41fb-ab55-c7dbb6d8bd75"
+    - service_id: 6a619782-ddc0-11ed-b5ea-0242ac120000
+      plan_id: 6a619782-ddc0-11ed-b5ea-0242ac120001
+      plan_name: "mysql-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "9e969215-4c10-450c-b88f-66cfdc46f783"
+    - service_id: 6a619782-ddc0-11ed-b5ea-0242ac120000
+      plan_id: 6a619782-ddc0-11ed-b5ea-0242ac120002
+      plan_name: "mysql-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "9e969215-4c10-450c-b88f-66cfdc46f783"
+    - service_id: 1df5622a-ddc5-11ed-b5ea-0242ac120000
+      plan_id: 1df5622a-ddc5-11ed-b5ea-0242ac120001
+      plan_name: "mariadb-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "3a487b9d-24ec-4177-8eb1-238df9024d18"
+    - service_id: 1df5622a-ddc5-11ed-b5ea-0242ac120000
+      plan_id: 1df5622a-ddc5-11ed-b5ea-0242ac120002
+      plan_name: "mariadb-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "3a487b9d-24ec-4177-8eb1-238df9024d18"
+    - service_id: 9361ae18-de76-11ed-b5ea-0242ac120000
+      plan_id: 9361ae18-de76-11ed-b5ea-0242ac120001
+      plan_name: "postgresql-ubuntu20.04-medium"
+      flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+      image_id: "935de17d-61da-4202-8a0b-1ee3f132403a"
+    - service_id: 9361ae18-de76-11ed-b5ea-0242ac120000
+      plan_id: 9361ae18-de76-11ed-b5ea-0242ac120002
+      plan_name: "postgresql-ubuntu20.04-small"
+      flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+      image_id: "935de17d-61da-4202-8a0b-1ee3f132403a"  

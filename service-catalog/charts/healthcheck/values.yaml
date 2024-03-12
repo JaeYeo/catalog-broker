@@ -1,0 +1,10 @@
+# Default values for Health Check
+imageOrg: "drycc-addons"
+imagePullPolicy: "Always"
+imageTag: "canary"
+imageRegistry: "registry.drycc.cc"
+# service-catalog image to use
+# image: service-catalog:canary
+# imagePullSecrets pre-existing secrets to use to pull images from a private registry
+imagePullSecrets: []
+rbacApiVersion: rbac.authorization.k8s.io/v1

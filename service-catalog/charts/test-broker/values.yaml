@@ -1,0 +1,17 @@
+# Default values for Test Service Broker
+imageOrg: "drycc-addons"
+imagePullPolicy: "Always"
+imageTag: "canary"
+imageRegistry: "registry.drycc.cc"
+# service-catalog image to use
+# image: service-catalog:canary
+# imagePullSecrets pre-existing secrets to use to pull images from a private registry
+imagePullSecrets: []
+# Whether the broker should also log to stderr instead of to files only
+alsoLogToStdErr: true
+# Certificate details to use for TLS. Leave blank to not use TLS
+tls:
+  # base-64 encoded PEM data for the TLS certificate
+  cert:
+  # base-64 encoded PEM data for the private key matching the certificate
+  key:

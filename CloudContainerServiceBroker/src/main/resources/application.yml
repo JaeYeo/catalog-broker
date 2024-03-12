@@ -1,0 +1,209 @@
+# server port
+server:
+  port: 80
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health
+        exclude: beans
+    health:
+      enabled: true
+
+cloudcontainerservicebroker:
+  data_path: D:\Work\CloudContainerServiceBroker\CloudContainerServiceBroker\data
+  
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  # freemarker
+  freemarker:
+    template-loader-path: classpath:/templates/cloudvm
+    suffix: .ftl
+  cloud:
+    openservicebroker:
+      base-path: /broker
+      catalog:
+        services:
+        - id: 5e854e66-c3be-11ed-afa1-0242ac120000
+          name: containerservice1
+          description: container deployment proxy service1
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment1
+          plans:
+            - id: 5e854e66-c3be-11ed-afa1-0242ac120001
+              name: containerdeploy1
+              description: container deployment proxy plan1
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 5da7318f-cdc7-4347-9486-d27964806ab0
+          name: containerservice2
+          description: container deployment proxy service2
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment2
+          plans:
+            - id: 5da7318f-cdc7-4347-9486-d27964806ab1
+              name: containerdeploy2
+              description: container deployment proxy plan2
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 11945a0c-bb87-4614-b85a-fe47207181e0
+          name: containerservice3
+          description: container deployment proxy service3
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment3
+          plans:
+            - id: 11945a0c-bb87-4614-b85a-fe47207181e1
+              name: containerdeploy3
+              description: container deployment proxy plan3
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: d1623a59-dd57-4aa0-a27a-1a4bdaf650f0
+          name: containerservice4
+          description: container deployment proxy service4
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment4
+          plans:
+            - id: d1623a59-dd57-4aa0-a27a-1a4bdaf650f1
+              name: containerdeploy4
+              description: container deployment proxy plan4
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 93cefa59-3224-4f1f-bb5e-a52477a41220
+          name: containerservice5
+          description: container deployment proxy service5
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment5
+          plans:
+            - id: 93cefa59-3224-4f1f-bb5e-a52477a41221
+              name: containerdeploy5
+              description: container deployment proxy plan5
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 6bd020a0-0570-45b5-9d1f-cb669f8fe860
+          name: containerservice6
+          description: container deployment proxy service6
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment6
+          plans:
+            - id: 6bd020a0-0570-45b5-9d1f-cb669f8fe861
+              name: containerdeploy6
+              description: container deployment proxy plan6
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 1b0ba6a7-893a-4931-85fe-5383039b4230
+          name: containerservice7
+          description: container deployment proxy service7
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment7
+          plans:
+            - id: 1b0ba6a7-893a-4931-85fe-5383039b4231
+              name: containerdeploy7
+              description: container deployment proxy plan7
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 40da764d-7d09-43be-939a-3ccae3909aa0
+          name: containerservice8
+          description: container deployment proxy service8
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment8
+          plans:
+            - id: 40da764d-7d09-43be-939a-3ccae3909aa1
+              name: containerdeploy8
+              description: container deployment proxy plan8
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: ab3774c9-5a88-447e-b0ae-3e835a3e7680
+          name: containerservice9
+          description: container deployment proxy service9
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment9
+          plans:
+            - id: ab3774c9-5a88-447e-b0ae-3e835a3e7681
+              name: containerdeploy9
+              description: container deployment proxy plan9
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"
+        - id: 40211200-2ed1-4e44-a1ff-d46a670cf1d0
+          name: containerservice10
+          description: container deployment proxy service10
+          bindable: false
+          plan_updateable: false
+          tags:
+            - container
+            - kubectl
+          metadata:
+            displayName: Container Deployment10
+          plans:
+            - id: 40211200-2ed1-4e44-a1ff-d46a670cf1d1
+              name: containerdeploy10
+              description: container deployment proxy plan10
+              metadata:
+                bullets:
+                  - "container"
+                  - "kubectl"                                                                                                                              

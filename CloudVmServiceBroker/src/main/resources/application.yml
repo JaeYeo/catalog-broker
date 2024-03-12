@@ -1,0 +1,362 @@
+# server port
+server:
+  port: 80
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health
+        exclude: beans
+    health:
+      enabled: true
+
+cloudvmservicebroker:
+  data_path: D:\Work\CloudVmServiceBroker\CloudVmServiceBroker\data
+  beat_ip: 112.175.114.177
+  beat_port: 31584
+  openstack_instances:
+  - service_id: 31c75396-58d0-11ed-9b6a-0242ac120000
+    plan_id: 31c75396-58d0-11ed-9b6a-0242ac120001
+    plan_name: "ubuntu20.04-medium"
+    flavor_id: "25003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "4483c90d-c81c-4934-80bf-836bc4f641b1"
+  - service_id: 31c75396-58d0-11ed-9b6a-0242ac120000
+    plan_id: 31c75396-58d0-11ed-9b6a-0242ac120002
+    plan_name: "ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "4483c90d-c81c-4934-80bf-836bc4f641b1"
+  - service_id: c962dd7e-de77-11ed-b5ea-0242ac120000
+    plan_id: c962dd7e-de77-11ed-b5ea-0242ac120001
+    plan_name: "centos8-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "bbebcfe2-ec0d-43ee-b41b-e14f4e8967e3"
+  - service_id: c962dd7e-de77-11ed-b5ea-0242ac120000
+    plan_id: c962dd7e-de77-11ed-b5ea-0242ac120002
+    plan_name: "centos8-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "bbebcfe2-ec0d-43ee-b41b-e14f4e8967e3"
+  - service_id: 55e94476-9d38-11ed-a8fc-0242ac120000
+    plan_id: 55e94476-9d38-11ed-a8fc-0242ac120001
+    plan_name: "apache-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "d0dbc1cc-37db-49aa-8042-a0effeb8a394"
+  - service_id: 55e94476-9d38-11ed-a8fc-0242ac120000
+    plan_id: 55e94476-9d38-11ed-a8fc-0242ac120002
+    plan_name: "apache-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "d0dbc1cc-37db-49aa-8042-a0effeb8a394"
+  - service_id: 3438eb42-9d42-11ed-a8fc-0242ac120000
+    plan_id: 3438eb42-9d42-11ed-a8fc-0242ac120001
+    plan_name: "nginx-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "59d48c84-8e1b-43d5-be59-4037bbde2e16"
+  - service_id: 3438eb42-9d42-11ed-a8fc-0242ac120000
+    plan_id: 3438eb42-9d42-11ed-a8fc-0242ac120002
+    plan_name: "nginx-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "59d48c84-8e1b-43d5-be59-4037bbde2e16"
+  - service_id: c5a92f2a-9d46-11ed-a8fc-0242ac120000
+    plan_id: c5a92f2a-9d46-11ed-a8fc-0242ac120001
+    plan_name: "tomcat-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "402f5f29-c163-473a-8228-e12c3d47b020"
+  - service_id: c5a92f2a-9d46-11ed-a8fc-0242ac120000
+    plan_id: c5a92f2a-9d46-11ed-a8fc-0242ac120002
+    plan_name: "tomcat-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "402f5f29-c163-473a-8228-e12c3d47b020"
+  - service_id: f5c8e470-9d46-11ed-a8fc-0242ac120000
+    plan_id: f5c8e470-9d46-11ed-a8fc-0242ac120001
+    plan_name: "wildfly-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "32b3b8e0-96de-41fb-ab55-c7dbb6d8bd75"
+  - service_id: f5c8e470-9d46-11ed-a8fc-0242ac120000
+    plan_id: f5c8e470-9d46-11ed-a8fc-0242ac120002
+    plan_name: "wildfly-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "32b3b8e0-96de-41fb-ab55-c7dbb6d8bd75"
+  - service_id: 6a619782-ddc0-11ed-b5ea-0242ac120000
+    plan_id: 6a619782-ddc0-11ed-b5ea-0242ac120001
+    plan_name: "mysql-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "9e969215-4c10-450c-b88f-66cfdc46f783"
+  - service_id: 6a619782-ddc0-11ed-b5ea-0242ac120000
+    plan_id: 6a619782-ddc0-11ed-b5ea-0242ac120002
+    plan_name: "mysql-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "9e969215-4c10-450c-b88f-66cfdc46f783"
+  - service_id: 1df5622a-ddc5-11ed-b5ea-0242ac120000
+    plan_id: 1df5622a-ddc5-11ed-b5ea-0242ac120001
+    plan_name: "mariadb-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "3a487b9d-24ec-4177-8eb1-238df9024d18"
+  - service_id: 1df5622a-ddc5-11ed-b5ea-0242ac120000
+    plan_id: 1df5622a-ddc5-11ed-b5ea-0242ac120002
+    plan_name: "mariadb-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "3a487b9d-24ec-4177-8eb1-238df9024d18"
+  - service_id: 9361ae18-de76-11ed-b5ea-0242ac120000
+    plan_id: 9361ae18-de76-11ed-b5ea-0242ac120001
+    plan_name: "postgresql-ubuntu20.04-medium"
+    flavor_id: "5003b1c8-e260-4e3a-8641-9ae251a1b8e5"
+    image_id: "935de17d-61da-4202-8a0b-1ee3f132403a"
+  - service_id: 9361ae18-de76-11ed-b5ea-0242ac120000
+    plan_id: 9361ae18-de76-11ed-b5ea-0242ac120002
+    plan_name: "postgresql-ubuntu20.04-small"
+    flavor_id: "e16b017c-ba1f-4b49-b6a8-57dd4f2564b0"
+    image_id: "935de17d-61da-4202-8a0b-1ee3f132403a"  
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  # freemarker
+  freemarker:
+    template-loader-path: classpath:/templates/cloudvm
+    suffix: .ftl
+  cloud:
+    openservicebroker:
+      base-path: /broker
+      catalog:
+        services:
+        - id: 31c75396-58d0-11ed-9b6a-0242ac120000
+          name: ubuntu20.04
+          description: Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+          - ubuntu
+          - focal
+          - openstack
+          metadata:
+            displayName: Ubuntu 20.04 on OpenStack
+          plans:
+          - id: 31c75396-58d0-11ed-9b6a-0242ac120001
+            name: ubuntu20.04-medium
+            description: Ubuntu 20.04 medium plan
+            metadata:
+              bullets:
+                - "default vm"
+                - "forcal"
+          - id: 31c75396-58d0-11ed-9b6a-0242ac120002
+            name: ubuntu20.04-small
+            description: Ubuntu 20.04 small plan
+            metadata:
+              bullets:
+                - "small vm"
+                - "forcal"
+        - id: c962dd7e-de77-11ed-b5ea-0242ac120000
+          name: centos8
+          description: CentOS 8
+          bindable: true
+          plan_updateable: false
+          tags:
+            - centos 8
+            - openstack
+          metadata:
+            displayName: CentOS 8 on OpenStack
+          plans:
+            - id: c962dd7e-de77-11ed-b5ea-0242ac120001
+              name: centos8-medium
+              description: CentOS 8 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "centos8"
+            - id: c962dd7e-de77-11ed-b5ea-0242ac120002
+              name: centos8-small
+              description: CentOS 8 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "centos8"
+        - id: 55e94476-9d38-11ed-a8fc-0242ac120000
+          name: apache-ubuntu20.04
+          description: Apache/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - apache
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: Apache/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: 55e94476-9d38-11ed-a8fc-0242ac120001
+              name: apache-ubuntu20.04-medium
+              description: Apache/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "apache"
+            - id: 55e94476-9d38-11ed-a8fc-0242ac120002
+              name: apache-ubuntu20.04-small
+              description: Apache/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "apache"
+        - id: 3438eb42-9d42-11ed-a8fc-0242ac120000
+          name: nginx-ubuntu20.04
+          description: Nginx/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - nginx
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: Nginx/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: 3438eb42-9d42-11ed-a8fc-0242ac120001
+              name: nginx-ubuntu20.04-medium
+              description: Nginx/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "nginx"
+            - id: 3438eb42-9d42-11ed-a8fc-0242ac120002
+              name: nginx-ubuntu20.04-small
+              description: Nginx/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "nginx"
+        - id: c5a92f2a-9d46-11ed-a8fc-0242ac120000
+          name: tomcat-ubuntu20.04
+          description: Tomcat/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - tomcat
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: Tomcat/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: c5a92f2a-9d46-11ed-a8fc-0242ac120001
+              name: tomcat-ubuntu20.04-medium
+              description: Tomcat/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "tomcat"
+            - id: c5a92f2a-9d46-11ed-a8fc-0242ac120002
+              name: tomcat-ubuntu20.04-small
+              description: Tomcat/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "tomcat"
+        - id: f5c8e470-9d46-11ed-a8fc-0242ac120000
+          name: wildfly-ubuntu20.04
+          description: Wildfly/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - wildfly
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: Wildfly/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: f5c8e470-9d46-11ed-a8fc-0242ac120001
+              name: wildfly-ubuntu20.04-medium
+              description: Wildfly/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "wildfly"
+            - id: f5c8e470-9d46-11ed-a8fc-0242ac120002
+              name: wildfly-ubuntu20.04-small
+              description: Wildfly/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "wildfly"
+        - id: 6a619782-ddc0-11ed-b5ea-0242ac120000
+          name: mysql-ubuntu20.04
+          description: MySQL/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - mysql
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: MySQL/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: 6a619782-ddc0-11ed-b5ea-0242ac120001
+              name: mysql-ubuntu20.04-medium
+              description: MySQL/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "mysql"
+            - id: 6a619782-ddc0-11ed-b5ea-0242ac120002
+              name: mysql-ubuntu20.04-small
+              description: MySQL/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "mysql"
+        - id: 1df5622a-ddc5-11ed-b5ea-0242ac120000
+          name: mariadb-ubuntu20.04
+          description: MariaDB/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - mariadb
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: MariaDB/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: 1df5622a-ddc5-11ed-b5ea-0242ac120001
+              name: mariadb-ubuntu20.04-medium
+              description: MariaDB/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "mariadb"
+            - id: 1df5622a-ddc5-11ed-b5ea-0242ac120002
+              name: mariadb-ubuntu20.04-small
+              description: MariaDB/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "mariadb"
+        - id: 9361ae18-de76-11ed-b5ea-0242ac120000
+          name: postgresql-ubuntu20.04
+          description: PostgreSQL/Ubuntu 20.04
+          bindable: true
+          plan_updateable: false
+          tags:
+            - postgresql
+            - ubuntu
+            - focal
+            - openstack
+          metadata:
+            displayName: PostgreSQL/Ubuntu 20.04 on OpenStack
+          plans:
+            - id: 9361ae18-de76-11ed-b5ea-0242ac120001
+              name: postgresql-ubuntu20.04-medium
+              description: PostgreSQL/Ubuntu 20.04 medium plan
+              metadata:
+                bullets:
+                  - "default vm"
+                  - "postgresql"
+            - id: 9361ae18-de76-11ed-b5ea-0242ac120002
+              name: postgresql-ubuntu20.04-small
+              description: PostgreSQL/Ubuntu 20.04 small plan
+              metadata:
+                bullets:
+                  - "small vm"
+                  - "postgresql"

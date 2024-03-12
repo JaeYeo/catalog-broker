@@ -1,0 +1,53 @@
+
+ingress:
+  enabled: true
+  hosts:
+    - host: cloudcontainerbroker.saas.sysmasterk8s.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+configuration: |-
+    cloudcontainerbrokerservicebroker:
+      data_path: \workspace\data
+    spring:
+      openservicebroker:
+        base-path: /broker
+        catalog:
+          services:
+          - id: 5e854e66-c3be-11ed-afa1-0242ac120000
+            name: containerservice
+            description: container deployment proxy service
+            bindable: false
+            plan_updateable: false
+            tags:
+              - container
+              - kubectl
+            metadata:
+              displayName: Container Deployment
+            plans:
+              - id: 5e854e66-c3be-11ed-afa1-0242ac120001
+                name: containerdeploy
+                description: container deployment proxy plan
+                metadata:
+                  bullets:
+                    - "container"
+                    - "kubectl"
+          - id: 5e854e66-c3be-11ed-afa1-0242ac120010
+            name: containerservice1
+            description: container deployment proxy service1
+            bindable: false
+            plan_updateable: false
+            tags:
+              - container
+              - kubectl
+            metadata:
+              displayName: Container Deployment
+            plans:
+              - id: 5e854e66-c3be-11ed-afa1-0242ac120011
+                name: containerdeploy1
+                description: container deployment proxy plan1
+                metadata:
+                  bullets:
+                    - "container"
+                    - "kubectl"
