@@ -2,7 +2,7 @@
 ingress:
   enabled: true
   hosts:
-    - host: cloudcontainerbroker.saas.sysmasterk8s.com
+    - host: cloudcontainerbroker.sysmasterk8s-v3.com
       paths:
         - path: /
           pathType: ImplementationSpecific
