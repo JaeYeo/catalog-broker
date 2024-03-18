@@ -1,0 +1,96 @@
+server:
+  port: 8333
+
+spring:
+  profiles: dev
+  application:
+    name: service-catalog-engine
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+#  rabbitmq:
+#    host: 112.175.114.154
+#    port: 5672
+#    username: admin
+#    password: uocYoYvV2OSIGLiw8MJQ
+  kafka:
+    # saas center
+    bootstrap-servers: 112.175.114.174:30192,112.175.114.174:30193,112.175.114.174:30194
+    consumer:
+      group-id: sc.group
+
+config:
+  vault:
+    path: /secret/data/dev/portal/svcbroker/
+    iaaspath: /secret/data/dev/portal/iaas/
+    kubeconfigpath: /secret/data/dev/k8s/
+    harborpath: /secret/data/dev/dops/harbor/web/url
+  kafka:
+    queue-name: sc.queue
+    exchange-name: sc.topic
+    routing-key: SysMasterK8s.*.sc.*
+    response:
+      mp:
+        topic: mp.topic
+        routing: SysMasterK8s.*.mp.*
+      up:
+        topic: up.topic
+        routing: SysMasterK8s.*.up.*
+      cm:
+        topic: cm.topic
+        routing: SysMasterK8s.*.cm.*
+
+
+db1:
+  datasource:
+    url: "jdbc:mariadb://112.175.114.188:3306/K8S_CATALOG?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Seoul"
+    username: root
+    password: sm@rt78!!
+    driver-class-name: org.mariadb.jdbc.Driver
+
+
+db2:
+  datasource:
+    url: "jdbc:mariadb://112.175.114.188:3306/K8S_IAAS?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Seoul"
+    username: root
+    password: sm@rt78!!
+    driver-class-name: org.mariadb.jdbc.Driver
+    maximum-pool-size: 16
+    connectionTimeout : 10000
+    max-lifetime: 240000
+
+#db3:
+#  datasource:
+#   url: "jdbc:mariadb://112.175.114.158:3306/api_db"
+#   username: root
+#   password: Challenge77!!
+#   username: vw_lng
+#   password: vwlng12!@#
+#   driver-class-name: org.mariadb.jdbc.Driver
+#   maximum-pool-size: 16
+#   connectionTimeout : 10000
+#   max-lifetime: 240000
+
+logging:
+  level:
+    root: info
+---
+env:
+  rancher:
+  #endpoint: "https://k8s.console.dev.sm-k8s.com/v3"
+  #auth: "kubeconfig-user-jr66s9298p:5nm4kh8zpcs8pgdw7gc6vn778pf8g5rxdqnmp8jg959lkgfn7krpfw"
+  #auth: "token-7dpdj:8z72khbqq46wd4rvxtwtqppxvq8xp2csjtnxcsptvfcswxhgmnx49x"
+  #tempClusterId: "c-hxvvz"
+
+spring:
+ profiles:
+   active: dev
+ cloud:
+   vault:
+     host: https://vault.sysmasterk8s-v3.com
+     port: 80
+     scheme: http
+     authentication: TOKEN
+     token: s.5Ujpw4YhmwaA7lmrAaMWVpKI

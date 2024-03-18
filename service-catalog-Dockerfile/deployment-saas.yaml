@@ -1,0 +1,107 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: service-catalog
+  name: service-catalog
+  namespace: portal-dev
+spec:
+  selector:
+    matchLabels:
+      app: service-catalog
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: service-catalog
+    spec:
+      containers:
+      - name: service-catalog
+        image: registry.sysmasterk8s-v3.com:443/service_catalog/service_catalog:v0.03
+        env:
+        - name: SPRING_CLOUD_VAULT_HOST
+          valueFrom: 
+            secretKeyRef:
+              name: service-catalog
+              key: vault_url
+        - name: SPRING_CLOUD_VAULT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: vault_key
+        - name: SPRING_RABBITMQ_HOST
+          value: portal-rabbitmq-ha.portal-dev.svc.cluster.local
+        - name: SPRING_RABBITMQ_PORT
+          value: "5672"
+        - name: SPRING_RABBITMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: rabbitmq_password
+        - name: SPRING_RABBITMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: rabbitmq_password
+        - name: SPRING_RABBITMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: rabbitmq_password
+        - name: DB1_DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: db1
+        - name: DB1_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: db_id
+        - name: DB1_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+             name: service-catalog
+             key: db_pw
+        - name: DB2_DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: db2
+        - name: DB2_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: service-catalog
+              key: db_id
+        - name: DB2_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+             name: service-catalog
+             key: db_pw
+        ports:
+          - containerPort: 8333
+        resources:
+          requests:
+            cpu: 0.1
+            memory: 0.5Gi
+          limits:
+            cpu: 0.5
+            memory: 1Gi
+      imagePullSecrets:
+      - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-catalog
+  namespace: portal-dev
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8333
+  selector:
+   app: service-catalog
+
+

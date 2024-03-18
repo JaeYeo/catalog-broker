@@ -1,0 +1,203 @@
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: apache-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/apache-0.1.0/index-apache.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: codeserver-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/hyunkim13/codeserver/master/index.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: harbor-cfg
+  namespace: harbor-chart
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/hyunkim13/harbor/master/index.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: jenkins-cfg
+spec:
+  repositories:
+    - url: https://k8s-nexus.spaasta.com/repository/downloads/addons/jenkins-0.1.0/index-jenkins.yaml
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: kafka-cfg
+spec:
+  repositories:
+    - url: https://k8s-nexus.spaasta.com/repository/downloads/addons/kafka-0.1.0/index-kafka.yaml
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: keycloak-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/keycloak-0.2.0/index-keycloak.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: kong-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/kong-0.1.2/index-kong.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: mariadb-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/mariadb-0.1.0/index-mariadb.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: mariadb-galera-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/mariadb-galera-0.1.0/index-mariadb-galera.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: minio-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/minio-0.1.1/index-minio.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: mongodb-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/mongodb-0.1.0/index-mongodb.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: mongodb-sharded-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/mongodb-sharded-0.1.0/index-mongodb-sharded.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: mysql-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/mysql-0.1.1/index-mysql.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: nginx-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/nginx-0.1.0/index-nginx.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: postgresql-cfg
+spec:
+  repositories:
+    - url: https://k8s-nexus.spaasta.com/repository/downloads/addons/postgresql-0.1.0/index-postgresql.yaml
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: postgresql-ha-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/postgresql-ha-0.1.0/index-postgresql-ha.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: rabbitmq-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/rabbitmq-0.1.1/index-rabbitmq.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: redis-cfg
+spec:
+  repositories:
+    - url: "https://k8s-nexus.spaasta.com/repository/downloads/addons/redis-0.1.0/index-redis.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: redmine-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/infranics/sysk8s/main/redmine-0.1.1/index-redmine.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: scouterapm-cfg
+  namespace: default
+spec:
+  repositories:
+          - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/scouter-0.1.0/index-scouterapm.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: tomcat-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/tomcat-0.1.0/index-tomcat.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: ubireport-cfg
+  namespace: ubireport-test
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/juchan133/ubireport/master/index.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: velero-cfg
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/juchan133/velero/master/index.yaml"
+---
+apiVersion: addons.kyma-project.io/v1alpha1
+kind: ClusterAddonsConfiguration
+metadata:
+  name: wildfly-cfg
+  namespace: default
+spec:
+  repositories:
+    - url: "https://raw.githubusercontent.com/JaeYeo/sysk8s/main/wildfly-0.1.0/index-wildfly.yaml"
